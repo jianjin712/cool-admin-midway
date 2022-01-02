@@ -50,7 +50,7 @@ export default (appInfo: EggAppInfo) => {
   // cool-admin特有的配置
   config.cool = {
     // 是否初始化模块数据库
-    initDB: true,
+    initDB: false,
     // 全局路由前缀
     router: {
       prefix: '',

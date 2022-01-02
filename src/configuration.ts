@@ -5,10 +5,10 @@ import * as orm from '@midwayjs/orm';
 import * as cool from 'midwayjs-cool-core';
 // import * as wxpay from 'midwayjs-cool-wxpay';
 import * as oss from 'midwayjs-cool-oss';
-// import * as redis from 'midwayjs-cool-redis';
-// import * as queue from 'midwayjs-cool-queue';
+import * as redis from 'midwayjs-cool-redis';
+import * as queue from 'midwayjs-cool-queue';
 // import * as alipay from 'midwayjs-cool-alipay';
-// import * as socket from 'midwayjs-cool-socket';
+import * as socket from 'midwayjs-cool-socket';
 
 @Configuration({
   // 注意组件顺序 cool 有依赖orm组件， 所以必须放在，orm组件之后 cool的其他组件必须放在cool 核心组件之后
@@ -20,15 +20,15 @@ import * as oss from 'midwayjs-cool-oss';
     // oss插件，需要到后台配置之后才有用，默认是本地上传
     oss,
     // 将缓存替换成redis
-    //redis,
+    redis,
     // 队列
-    //queue,
+    queue,
     // 微信支付
     //wxpay,
     // 支付宝支付
     //alipay,
     // socket
-    //socket,
+    socket,
   ],
 })
 export class ContainerLifeCycle implements ILifeCycle {
