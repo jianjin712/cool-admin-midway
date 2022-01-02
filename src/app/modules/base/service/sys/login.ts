@@ -5,7 +5,7 @@ import {
   CoolCommException,
   CoolConfig,
   RESCODE,
-} from 'midwayjs-cool-core';
+} from '@cool-midway/core';
 import { LoginDTO } from '../../dto/login';
 import * as svgCaptcha from 'svg-captcha';
 import { v1 as uuid } from 'uuid';
@@ -19,7 +19,7 @@ import { BaseSysMenuService } from './menu';
 import { BaseSysDepartmentService } from './department';
 import * as jwt from 'jsonwebtoken';
 import { Context } from 'egg';
-import * as  svgToDataURL from 'mini-svg-data-uri';
+import * as svgToDataURL from 'mini-svg-data-uri';
 
 /**
  * 登录
